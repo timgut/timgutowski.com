@@ -119,112 +119,212 @@
                             <div class="mb-2">
                                 <h2 class="text-xl font-semibold text-black text-center">Technical Skills Matrix</h2>
                             </div>
-                            <!-- Pillbox Usage Key Legend -->
-                            <div class="flex flex-wrap justify-center gap-3 text-sm mb-6">
-                                <span class="px-3 py-1 bg-tg-blue text-white rounded-full border border-tg-blue">Expert</span>
-                                <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full border border-tg-yellow">Proficient</span>
-                                <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full border border-tg-blue">Familiar</span>
-                                <span class="px-3 py-1 bg-gray-300 text-gray-600 rounded-full border border-gray-400">Don't Use</span>
+                            <!-- Skill Level Legend -->
+                            <div class="flex flex-wrap justify-center gap-5 text-sm text-gray-700 mb-6">
+                                <span class="flex items-center gap-2"><span class="inline-block w-8 h-1.5 rounded-full bg-tg-blue"></span>Expert</span>
+                                <span class="flex items-center gap-2"><span class="inline-block w-8 h-1.5 rounded-full bg-tg-yellow-dark"></span>Proficient</span>
+                                <span class="flex items-center gap-2"><span class="inline-block w-8 h-1.5 rounded-full bg-tg-blue/40"></span>Familiar</span>
                             </div>
-                            <!-- Tech Stack Content (pills match legend, with hover effect) -->
-                            <div class="flex flex-col gap-6">
-                                <!-- Frontend -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                            <!-- Skill Category Cards -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fab fa-js text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">Frontend</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">JavaScript</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">React</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">HTML/CSS/SASS</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">WordPress</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Webpack</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">Tailwind</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">TypeScript</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">JavaScript</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">React</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">HTML/CSS/SASS</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">WordPress</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Webpack</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">Tailwind</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">TypeScript</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="border-t border-tg-blue/20 mx-8">
-                                <!-- Backend -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fas fa-server text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">Backend</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Ruby on Rails</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">REST</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">OpenAI/LLMs</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">SQL</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Node.js</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">Firebase</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">PHP</span>
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">NoSQL</span>
-                                        <span class="px-3 py-1 bg-gray-300 text-gray-600 rounded-full text-sm border border-gray-400 transition-transform transition-colors duration-200 hover:scale-105 hover:bg-gray-400" data-usage="dontuse">Java</span>
-                                        <span class="px-3 py-1 bg-gray-300 text-gray-600 rounded-full text-sm border border-gray-400 transition-transform transition-colors duration-200 hover:scale-105 hover:bg-gray-400" data-usage="dontuse">.NET</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Ruby on Rails</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">REST</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">OpenAI/LLMs</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">SQL</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Node.js</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">Firebase</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">PHP</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">NoSQL</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="border-t border-tg-blue/20 mx-8">
-                                <!-- DevOps -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fas fa-cloud text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">DevOps</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Amazon Web Services</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">WP Engine</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Unix</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">nginx</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">Docker</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">Apache</span>
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">Azure</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Amazon Web Services</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">WP Engine</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Unix</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">nginx</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">Docker</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">Apache</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">Azure</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="border-t border-tg-blue/20 mx-8">
-                                <!-- CRMs -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fas fa-users text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">CRMs</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Action Network</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Hubspot</span>
-                                        <span class="px-3 py-1 bg-tg-yellow text-tg-blue rounded-full text-sm border border-tg-yellow transition-transform transition-colors duration-200 hover:scale-105 hover:bg-yellow-400" data-usage="proficient">Mailchimp</span>
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">Salesforce</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Action Network</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Hubspot</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="proficient">
+                                            <div class="text-sm text-gray-800">Mailchimp</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-yellow-dark w-2/3"></div></div>
+                                        </div>
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">Salesforce</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="border-t border-tg-blue/20 mx-8">
-                                <!-- Tools & Methods -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fas fa-tools text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">Tools & Methods</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Git</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Agile</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Asana</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Trello</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Local</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Google Drive</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">New Relic</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Claude</span>
-                                        <span class="px-3 py-1 bg-tg-blue text-white rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue-dark" data-usage="expert">Zapier</span>
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">Scrum</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Git</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Agile</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Asana</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Trello</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Local</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Google Drive</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">New Relic</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Claude</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="expert">
+                                            <div class="text-sm text-gray-800">Zapier</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue w-full"></div></div>
+                                        </div>
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">Scrum</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <hr class="border-t border-tg-blue/20 mx-8">
-                                <!-- Past Experience -->
-                                <div>
-                                    <div class="flex items-center gap-2 mb-2">
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 hover-lift">
+                                    <div class="flex items-center gap-2 mb-4">
                                         <i class="fas fa-history text-tg-blue"></i>
                                         <span class="font-semibold text-tg-blue">Past Experience</span>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">Python</span>
-                                        <span class="px-3 py-1 bg-tg-blue-light text-tg-blue rounded-full text-sm border border-tg-blue transition-transform transition-colors duration-200 hover:scale-105 hover:bg-tg-blue/40" data-usage="familiar">Drupal</span>
+                                    <div class="flex flex-col gap-2.5">
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">Python</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
+                                        <div data-usage="familiar">
+                                            <div class="text-sm text-gray-800">Drupal</div>
+                                            <div class="h-1.5 bg-gray-100 rounded-full mt-1"><div class="h-1.5 rounded-full bg-tg-blue/40 w-1/3"></div></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
