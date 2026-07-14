@@ -1,0 +1,148 @@
+/* Custom styles */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom hover effects */
+.hover-lift {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* Code block styling */
+pre {
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Shrinking header styles */
+#main-header.minimized {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.shrink-profile {
+    transition: width 0.3s, height 0.3s, border-width 0.3s;
+}
+.minimized-profile {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border-width: 2px !important;
+}
+.shrink-name {
+    transition: font-size 0.3s, margin-bottom 0.3s;
+}
+.minimized-name {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.1rem !important;
+}
+.shrink-title {
+    transition: font-size 0.3s, margin-bottom 0.3s;
+}
+.minimized-title {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.1rem !important;
+}
+.shrink-links {
+    transition: opacity 0.3s, max-height 0.3s, margin-bottom 0.3s;
+    max-height: 100px;
+    opacity: 1;
+}
+.minimized-links {
+    opacity: 0;
+    max-height: 0;
+    margin-bottom: 0 !important;
+    pointer-events: none;
+}
+
+/* Center header content by default, shift left on minimize */
+#header-profile {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+}
+#main-header.minimized #header-profile {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin-left: 0;
+}
+@media (min-width: 768px) {
+    #header-profile {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+#main-header {
+    /* Ensure header overlays content, but content is padded below */
+    z-index: 50;
+}
+section, main {
+    /* Add top padding to ensure content never loads behind header */
+    scroll-margin-top: 120px;
+}
+@media (max-width: 767px) {
+    section, main {
+        scroll-margin-top: 100px;
+    }
+}
+
+.bg-tg-gray-light {
+    background-color: #f7f8fa;
+}
+
+.bg-tg-card {
+    background-color: rgba(255,255,255,0.97);
+    border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+}
+.border-tg-card {
+    border-color: #e5e7eb;
+} 
