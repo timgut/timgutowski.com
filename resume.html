@@ -1,216 +1,151 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Resume — Tim Gutowski</title>
+    <meta name="description" content="Resume of Tim Gutowski: Director of Development at a Chicago agency, full-stack engineer (Ruby on Rails, React, AWS, WordPress), with prior roles at the University of Chicago, Classified Ventures (cars.com), and Ignite Sports Media.">
+    <meta name="keywords" content="Tim Gutowski, web development consultant, WordPress developer, WordPress rescue, Ruby on Rails, React, JavaScript, TypeScript, PHP, MySQL, AWS, REST APIs, Action Network, EveryAction, Mailchimp, Asana API, AI integration, Claude, union websites, nonprofit websites, advocacy technology, legislative scorecard, Chicago consultant, freelance developer">
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind.config.js"></script>
-    <!-- Custom styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Tim Gutowski: Full-stack Engineer, Software Engineer, Director of Software Development, Front-End Developer, Director of Technology, Technical Project Manager, DevOps Engineer. Expert in JavaScript, React, Ruby on Rails, AWS, MySQL, SASS, Webpacker, Docker, WordPress, and more.">
-    <meta name="keywords" content="JavaScript, React, Ruby on Rails, AWS, MySQL, SASS, Webpacker, Docker, WordPress, HTML, CSS, TypeScript, PHP, REST, SQL, Node.js, Agile, DevOps, Cloud, Git, Nginx, Azure, Salesforce, Mailchimp, Action Network, Asana, Trello, Google Drive, Python, Drupal, Technical Project Manager, Full-stack Engineer, Software Engineer, Director of Technology, Resume, Portfolio, Tim Gutowski">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       .font-sans { font-family: 'Inter', sans-serif; }
-      /* .bg-tg-blue-verylight { background-color: #f6faff; }  removed for consistency */
+      .font-serif { font-family: 'Lora', Georgia, serif; }
+      .font-mono { font-family: 'Fira Code', monospace; }
     </style>
 </head>
-<body class="bg-tg-gray-light font-sans"">
-      <!-- Header Section -->
-    <header id="main-header" class="fixed w-full bg-white/80 backdrop-blur-sm shadow-tg-blue/10 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
-            <div id="header-profile" class="flex flex-col items-center md:flex-row md:items-center gap-4 mx-auto md:mx-0 transition-all duration-300">
-                <!-- Profile Image -->
-                <a href="/" class="block w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-tg-blue shrink-profile transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                    <img src="/img/headshot.jpeg" alt="Tim Gutowski" class="w-full h-full object-cover">
-                </a>
-                <div class="ml-0 md:ml-2 text-center md:text-left">
-                    <h1 class="text-2xl md:text-3xl font-bold text-black mb-1 shrink-name transition-all duration-300 font-sans">Tim Gutowski</h1>
-                    <p class="text-base md:text-lg text-gray-900 mb-2 shrink-title transition-all duration-300 font-sans">Technology Professional, Writer and Manager</p>
-                    <div class="flex flex-wrap gap-2 shrink-links transition-all duration-300 justify-center md:justify-start">
-                        <a href="https://github.com/timgut" class="inline-flex items-center px-3 py-1 bg-tg-blue text-white rounded-lg hover:bg-tg-yellow-dark text-sm"><i class="fab fa-github mr-2"></i>GitHub</a>
-                        <a href="https://www.linkedin.com/in/timgutowski/" class="inline-flex items-center px-3 py-1 bg-tg-yellow text-tg-blue rounded-lg hover:bg-tg-yellow-dark text-sm"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
-                        <a href="mailto:timgut@gmail.com" class="inline-flex items-center px-3 py-1 bg-white text-tg-blue rounded-lg hover:bg-tg-yellow transition duration-300 text-sm"><i class="fas fa-envelope mr-2"></i>Contact</a>
-                    </div>
-                </div>
+<body class="bg-tg-blue-light font-sans text-gray-900">
+    <header id="main-header" class="fixed w-full top-0 bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="img/headshot.jpeg" alt="Tim Gutowski" class="w-10 h-10 rounded-full border-2 border-tg-blue object-cover group-hover:border-tg-yellow-dark transition-colors duration-200">
+                <span class="flex flex-col leading-tight">
+                    <span class="font-serif font-bold text-lg text-gray-900">Tim Gutowski</span>
+                    <span class="text-[11px] uppercase tracking-widest text-tg-blue">Web Development Consulting</span>
+                </span>
+            </a>
+            <div class="hidden md:flex items-center gap-7">
+                    <a href="index.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">Home</a>
+                    <a href="consulting.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">Services</a>
+                    <a href="portfolio.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">Work</a>
+                    <a href="about.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">About</a>
+                    <a href="mailto:timgut@gmail.com?subject=Project%20inquiry" class="bg-tg-yellow hover:bg-tg-yellow-dark text-gray-900 text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200">Start a project</a>
             </div>
-            <div class="flex-1 flex justify-end items-center mt-4 md:mt-0">
-                <div class="hidden md:flex space-x-8">
-                    <a href="/resume" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Resume</a>
-                    <a href="/consulting" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Consulting</a>
-                    <a href="/portfolio" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Portfolio</a>
-                    <a href="/about" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">About</a>
-                </div>
-                <!-- Mobile menu button -->
-                <button class="md:hidden ml-4" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+            <button class="md:hidden text-2xl" id="mobile-menu-button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
         </nav>
-        <!-- Mobile Navigation Menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/resume.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Resume</a>
-                <a href="/consulting.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Consulting</a>
-                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Portfolio</a>
-                <a href="/about.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">About</a>
+        <div class="hidden md:hidden border-t border-gray-100 bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">Home</a>
+                <a href="consulting.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">Work</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">About</a>
+                <a href="mailto:timgut@gmail.com?subject=Project%20inquiry" class="block px-3 py-2 text-tg-blue font-semibold">Start a project &rarr;</a>
             </div>
         </div>
     </header>
-   
-    <!-- Main Content -->
-    <main class="relative">
-        <div class="relative z-10">
-            <!-- Hero Image Section (matches portfolio page) -->
-            <div class="w-full max-w-5xl mx-auto pt-40 pb-4">
-                <div class="relative rounded-2xl overflow-hidden shadow-lg mb-2">
-                    <img src="img/resume-hero.jpg" alt="Resume Hero" class="w-full h-64 object-cover object-center" style="opacity:0.8;" />
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <h2 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg text-center">Resume</h2>
-                    </div>
+
+    <main class="pt-24">
+        <section class="container mx-auto max-w-4xl px-4 pt-12 pb-10">
+            <h1 class="font-serif text-4xl font-bold mb-4">Resume</h1>
+            <p class="text-gray-700 leading-relaxed max-w-3xl">Experienced full-stack software engineer with strategic expertise leading and managing technical teams across industries (education, sports, politics). I create custom SaaS applications using Ruby on Rails, React, AWS, SQL, WordPress, and more &mdash; and I&rsquo;m accomplished at cultivating client relationships, managing teams, and building online products.</p>
+        </section>
+        <section class="container mx-auto max-w-4xl px-4 grid gap-6">
+            <div class="bg-white rounded-xl border border-gray-200 p-8">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                    <h3 class="font-semibold text-lg">Director of Development</h3>
+                    <span class="font-mono text-xs text-gray-500">2008 &ndash; present</span>
                 </div>
+                <p class="text-sm text-tg-blue font-medium mb-4">Trilogy Interactive &middot; Chicago, IL</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Oversee planning, budgeting, and production of websites and custom applications for political campaigns and non-profits, working closely with stakeholders and internal teams to design, build, and maintain scalable solutions.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Developed an enterprise Ruby on Rails CMS product hosting 125+ client websites serving 1MM+ pages monthly.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Oversee budgets up to $500K and coordinate resources to deliver SaaS applications using Rails, React, SQL, Node, AWS, Docker, and GitHub.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Engineer RESTful API tools with Asana to boost design team efficiency and improve client delivery times.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Manage security and technical standards to ensure uptime and protect client data.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Create tools to migrate client websites to WordPress with industry-standard plugins and custom scripting.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Serve as a certified governmental subcontractor developing applications for federal agencies under strict compliance standards.</span></li>
+                </ul>
             </div>
-            <div class="container mx-auto px-4 max-w-4xl pb-16">
-                <div class="bg-tg-card rounded-2xl shadow-lg p-8 md:p-12 opacity-0 translate-y-8 transition duration-700 ease-out" id="resume-content">
-                    <!-- Overview Section -->
-                    <section class="mb-12">
-                        <h2 class="text-3xl font-bold text-tg-blue mb-6">Overview</h2>
-                        <p class="text-lg text-gray-900 leading-relaxed">
-                            <span style="font-weight: 400;">Experienced full-stack software engineer with strategic expertise leading and managing technical teams across industries (education, sports, politics). Create custom SaaS applications using Ruby on Rails, React, AWS, SQL, Wordpress, and more. Accomplished at cultivating client relationships, managing teams, and building online products.</span>
-                        </p>
-                    </section>
-                    <hr class="border-t border-tg-blue/20 mx-8 mb-12">
-                    <!-- Work Experience Section -->
-                    <section class="mb-12">
-                        <h2 class="text-3xl font-bold text-tg-blue mb-8">Work Experience</h2>
-                        <!-- Current Position -->
-                        <div class="mb-8">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Director of Development</h3>
-                                <p class="text-gray-600">2008 - present</p>
-                            </div>
-                            <p class="text-gray-700 font-medium mb-4">Trilogy Interactive, Chicago, IL</p>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                              <li>Oversee the planning, budgeting, and production of websites and custom applications for political campaigns and non-profits, working closely with stakeholders and internal teams to design, build, and maintain scalable solutions that support digital engagement and client initiatives.</li>
-                              <li>Developed enterprise Ruby on Rails-based CMS product that hosts more than 125 client websites serving 1MM+ pages monthly.</li>
-                              <li>Oversee budgets up to $500K and coordinate resources to successfully deliver SaaS applications using Rails, React, SQL, Node, AWS, Docker, and GitHub.</li>
-                              <li>Engineer RESTful API tools with Asana to boost design team efficiency and improve client delivery times.</li>
-                              <li>Manage security and technical standards to ensure uptime and protect client data.</li>
-                              <li>Create tools to migrate client websites to WordPress, utilizing industry-standard plugins and custom scripting.</li>
-                            <li>Serve as a certified governmental subcontractor to develop applications for federal agencies under strict compliance standards.</li>
-                            </ul>
-                        </div>
-                        <hr class="border-t border-tg-blue/20 mx-8 mb-8">
-                        <!-- University of Chicago -->
-                        <div class="mb-8">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Manager of Information Services</h3>
-                                <p class="text-gray-600">2005 - 2008</p>
-                            </div>
-                            <p class="text-gray-700 font-medium mb-4">University of Chicago, Chicago, IL</p>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Managed the web presence and related IT initiatives for the University of Chicago's central communications unit.</li>
-                                <li>Designed and implemented innovative LAMP-stack web applications (PHP, MySQL, Apache) and managed Mac OS servers.</li>
-                                <li>Collaborated with central admin, academic faculty, and internal staff to deliver web-based applications to raise the University’s public profile.</li>
-                            </ul>
-                        </div>
-                        <hr class="border-t border-tg-blue/20 mx-8 mb-8">
-                        <!-- Classified Ventures -->
-                        <div class="mb-8">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Senior Producer</h3>
-                                <p class="text-gray-600">2004 - 2005</p>
-                            </div>
-                            <p class="text-gray-700 font-medium mb-4">Classified Ventures, Chicago, IL</p>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Defined and managed a portfolio of website products for cars.com, a major automotive consumer site.</li>
-                                <li>Developed and implemented channel and site branding solutions while managing freelance editorial staff.</li>
-                            </ul>
-                        </div>
-                        <hr class="border-t border-tg-blue/20 mx-8 mb-8">
-                        <!-- Sportvision -->
-                        <div class="mb-8">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Managing Editor</h3>
-                                <p class="text-gray-600">1999 - 2004</p>
-                            </div>
-                            <p class="text-gray-700 font-medium mb-4">Sportvision / Ignite Sports Media, Chicago, IL</p>
-                            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                                <li>Served as managing editor for online, 10-person editorial team, spearheading daily editorial and production budgets for breaking news coverage.</li>
-                                <li>Led production and maintenance of dozens of dynamic websites for NFL, MLB, NHL, and MLS teams, enhancing fan engagement and ticket sales.</li>
-                                <li>Spearheaded the creation of a syndicated sports portal for clients like the Washington Post, FOX Sports, Britannica.com and others.</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <hr class="border-t border-tg-blue/20 mx-8 mb-12">
-                    <!-- Education Section -->
-                    <section class="mb-12">
-                        <h2 class="text-3xl font-bold text-tg-blue mb-8">Education</h2>
-                        <!-- Masters -->
-                        <div class="mb-6">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Masters in Computer Science</h3>
-                                <p class="text-gray-600">2007 - 2008</p>
-                            </div>
-                            <p class="text-gray-700">University of Chicago</p>
-                        </div>
-                        <hr class="border-t border-tg-blue/20 mx-8 mb-6">
-                        <!-- Bachelors -->
-                        <div class="mb-6">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                                <h3 class="text-xl font-semibold text-gray-900">Bachelor of Science in Journalism</h3>
-                                <p class="text-gray-600">1990 - 1994</p>
-                            </div>
-                            <p class="text-gray-700">University of Illinois, Urbana-Champaign</p>
-                        </div>
-                    </section>
+            <div class="bg-white rounded-xl border border-gray-200 p-8">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                    <h3 class="font-semibold text-lg">Manager of Information Services</h3>
+                    <span class="font-mono text-xs text-gray-500">2005 &ndash; 2008</span>
                 </div>
+                <p class="text-sm text-tg-blue font-medium mb-4">University of Chicago &middot; Chicago, IL</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Managed the web presence and related IT initiatives for the University&rsquo;s central communications unit.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Designed and implemented LAMP-stack web applications (PHP, MySQL, Apache) and managed Mac OS servers.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Collaborated with central administration, faculty, and staff to deliver web applications raising the University&rsquo;s public profile.</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-8">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                    <h3 class="font-semibold text-lg">Senior Producer</h3>
+                    <span class="font-mono text-xs text-gray-500">2004 &ndash; 2005</span>
+                </div>
+                <p class="text-sm text-tg-blue font-medium mb-4">Classified Ventures &middot; Chicago, IL</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Defined and managed a portfolio of website products for cars.com, a major automotive consumer site.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Developed and implemented channel and site branding solutions while managing freelance editorial staff.</span></li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-8">
+                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                    <h3 class="font-semibold text-lg">Managing Editor</h3>
+                    <span class="font-mono text-xs text-gray-500">1999 &ndash; 2004</span>
+                </div>
+                <p class="text-sm text-tg-blue font-medium mb-4">Sportvision / Ignite Sports Media &middot; Chicago, IL</p>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Led a 10-person online editorial team, spearheading daily editorial and production budgets for breaking news coverage.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Led production and maintenance of dozens of dynamic websites for NFL, MLB, NHL, and MLS teams.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-caret-right text-tg-yellow-dark mt-1"></i><span>Spearheaded a syndicated sports portal for clients including the Washington Post, FOX Sports, and Britannica.com.</span></li>
+                </ul>
+            </div>
+        </section>
+        <section class="container mx-auto max-w-4xl px-4 mt-10">
+            <div class="bg-white rounded-xl border border-gray-200 p-8">
+                <h2 class="font-serif text-2xl font-bold mb-4">Education</h2>
+                <p class="text-sm text-gray-700 mb-2"><span class="font-semibold">Masters in Computer Science</span>, University of Chicago &mdash; 2007&ndash;2008</p>
+                <p class="text-sm text-gray-700"><span class="font-semibold">B.S. in Journalism</span>, University of Illinois, Urbana-Champaign &mdash; 1990&ndash;1994</p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-gray-300 mt-20">
+        <div class="container mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-3">
+            <div>
+                <p class="font-serif font-bold text-white text-lg mb-2">Tim Gutowski</p>
+                <p class="text-sm leading-relaxed">Custom web tools for unions, nonprofits, and advocacy organizations &mdash; plus WordPress rescues and Rails/React application work. Based in Chicago, working everywhere.</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Site</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="consulting.html" class="hover:text-tg-yellow">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-tg-yellow">Work</a></li>
+                    <li><a href="about.html" class="hover:text-tg-yellow">About</a></li>
+                    <li><a href="resume.html" class="hover:text-tg-yellow">Resume</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Contact</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="mailto:timgut@gmail.com" class="hover:text-tg-yellow"><i class="fas fa-envelope mr-2 text-tg-yellow"></i>timgut@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/timgutowski/" class="hover:text-tg-yellow"><i class="fab fa-linkedin mr-2 text-tg-yellow"></i>linkedin.com/in/timgutowski</a></li>
+                    <li><a href="https://github.com/timgut" class="hover:text-tg-yellow"><i class="fab fa-github mr-2 text-tg-yellow"></i>github.com/timgut</a></li>
+                    <li><span><i class="fas fa-location-dot mr-2 text-tg-yellow"></i>Chicago, IL</span></li>
+                </ul>
             </div>
         </div>
-        <script>
-        // Fade-in animation for content
-        document.addEventListener('DOMContentLoaded', function() {
-          const content = document.getElementById('resume-content');
-          const observer = new window.IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-8');
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.15 });
-          observer.observe(content);
-        });
-        </script>
-    </main>
-
-   <!-- Footer Section -->
-    <footer class="bg-tg-blue text-white py-6">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-2 md:mb-0">
-                        <p class="text-tg-yellow-dark">© 2026 Tim Gutowski. All rights reserved.</p>
-                        <!--p class="text-tg-yellow-dark text-xs mt-1">Photo by <a href="https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors">Chris Ried</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-code-on-it-ieic5Tq8YMk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors">Unsplash</a></p-->
-                        
-                        <p class="text-tg-yellow-dark text-xs mt-1">Photo by <a href="https://unsplash.com/@halacious?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors underline">Hal Gatewood</a> on <a href="https://unsplash.com/photos/white-paper-o2305170alM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors underline">Unsplash</a></p>
-                        
-                    </div>
-                    <div class="flex space-x-6">
-                        <a href="https://github.com/timgut" class="text-tg-yellow hover:text-white"><i class="fab fa-github text-2xl"></i></a>
-                        <a href="https://www.linkedin.com/in/timgutowski/" class="text-tg-yellow hover:text-white"><i class="fab fa-linkedin text-2xl"></i></a>
-                        <a href="mailto:timgut@gmail.com" class="text-tg-yellow hover:text-white"><i class="fas fa-envelope text-2xl"></i></a>
-                    </div>
-                </div>
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto max-w-6xl px-4 py-5 text-xs text-gray-500">
+                <p>&copy; 2026 Tim Gutowski. All rights reserved.</p>
+                
             </div>
         </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>

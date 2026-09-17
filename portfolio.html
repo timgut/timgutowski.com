@@ -1,220 +1,167 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Work — Tim Gutowski</title>
+    <meta name="description" content="Selected work by Tim Gutowski: the AFSCME legislative scorecard, the Silica-Safe planning tool for CPWR, an enterprise Rails CMS serving 300+ sites, AWS platform management, and 25+ years of web development for campaigns, unions, and nonprofits.">
+    <meta name="keywords" content="Tim Gutowski, web development consultant, WordPress developer, WordPress rescue, Ruby on Rails, React, JavaScript, TypeScript, PHP, MySQL, AWS, REST APIs, Action Network, EveryAction, Mailchimp, Asana API, AI integration, Claude, union websites, nonprofit websites, advocacy technology, legislative scorecard, Chicago consultant, freelance developer">
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind.config.js"></script>
-    <!-- Custom styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Tim Gutowski: Full-stack Engineer, Software Engineer, Director of Software Development, Front-End Developer, Director of Technology, Technical Project Manager, DevOps Engineer. Expert in JavaScript, React, Ruby on Rails, AWS, MySQL, SASS, Webpacker, Docker, WordPress, and more.">
-    <meta name="keywords" content="JavaScript, React, Ruby on Rails, AWS, MySQL, SASS, Webpacker, Docker, WordPress, HTML, CSS, TypeScript, PHP, REST, SQL, Node.js, Agile, DevOps, Cloud, Git, Nginx, Azure, Salesforce, Mailchimp, Action Network, Asana, Trello, Google Drive, Python, Drupal, Technical Project Manager, Full-stack Engineer, Software Engineer, Director of Technology, Resume, Portfolio, Tim Gutowski">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       .font-sans { font-family: 'Inter', sans-serif; }
-      /* .bg-tg-blue-verylight { background-color: #f6faff; }  removed for consistency */
+      .font-serif { font-family: 'Lora', Georgia, serif; }
+      .font-mono { font-family: 'Fira Code', monospace; }
     </style>
 </head>
-<body class="bg-tg-gray-light font-sans"">
-      <!-- Header Section -->
-    <header id="main-header" class="fixed w-full bg-white/80 backdrop-blur-sm shadow-tg-blue/10 z-50 transition-all duration-300">
-        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
-            <div id="header-profile" class="flex flex-col items-center md:flex-row md:items-center gap-4 mx-auto md:mx-0 transition-all duration-300">
-                <!-- Profile Image -->
-                <a href="/" class="block w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-tg-blue shrink-profile transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                    <img src="/img/headshot.jpeg" alt="Tim Gutowski" class="w-full h-full object-cover">
-                </a>
-                <div class="ml-0 md:ml-2 text-center md:text-left">
-                    <h1 class="text-2xl md:text-3xl font-bold text-black mb-1 shrink-name transition-all duration-300 font-sans">Tim Gutowski</h1>
-                    <p class="text-base md:text-lg text-gray-900 mb-2 shrink-title transition-all duration-300 font-sans">Technology Professional, Writer and Manager</p>
-                    <div class="flex flex-wrap gap-2 shrink-links transition-all duration-300 justify-center md:justify-start">
-                        <a href="https://github.com/timgut" class="inline-flex items-center px-3 py-1 bg-tg-blue text-white rounded-lg hover:bg-tg-yellow-dark text-sm"><i class="fab fa-github mr-2"></i>GitHub</a>
-                        <a href="https://www.linkedin.com/in/timgutowski/" class="inline-flex items-center px-3 py-1 bg-tg-yellow text-tg-blue rounded-lg hover:bg-tg-yellow-dark text-sm"><i class="fab fa-linkedin mr-2"></i>LinkedIn</a>
-                        <a href="mailto:timgut@gmail.com" class="inline-flex items-center px-3 py-1 bg-white text-tg-blue rounded-lg hover:bg-tg-yellow transition duration-300 text-sm"><i class="fas fa-envelope mr-2"></i>Contact</a>
-                    </div>
-                </div>
+<body class="bg-tg-blue-light font-sans text-gray-900">
+    <header id="main-header" class="fixed w-full top-0 bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="img/headshot.jpeg" alt="Tim Gutowski" class="w-10 h-10 rounded-full border-2 border-tg-blue object-cover group-hover:border-tg-yellow-dark transition-colors duration-200">
+                <span class="flex flex-col leading-tight">
+                    <span class="font-serif font-bold text-lg text-gray-900">Tim Gutowski</span>
+                    <span class="text-[11px] uppercase tracking-widest text-tg-blue">Web Development Consulting</span>
+                </span>
+            </a>
+            <div class="hidden md:flex items-center gap-7">
+                    <a href="index.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">Home</a>
+                    <a href="consulting.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">Services</a>
+                    <a href="portfolio.html" class="text-tg-blue font-semibold text-sm font-medium transition-colors duration-200">Work</a>
+                    <a href="about.html" class="text-gray-700 hover:text-tg-blue text-sm font-medium transition-colors duration-200">About</a>
+                    <a href="mailto:timgut@gmail.com?subject=Project%20inquiry" class="bg-tg-yellow hover:bg-tg-yellow-dark text-gray-900 text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200">Start a project</a>
             </div>
-            <div class="flex-1 flex justify-end items-center mt-4 md:mt-0">
-                <div class="hidden md:flex space-x-8">
-                    <a href="/resume" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Resume</a>
-                    <a href="/consulting" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Consulting</a>
-                    <a href="/portfolio" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">Portfolio</a>
-                    <a href="/about" class="text-gray-900 font-semibold text-lg hover:text-black relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full">About</a>
-                </div>
-                <!-- Mobile menu button -->
-                <button class="md:hidden ml-4" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+            <button class="md:hidden text-2xl" id="mobile-menu-button" aria-label="Open menu"><i class="fas fa-bars"></i></button>
         </nav>
-        <!-- Mobile Navigation Menu -->
-        <div class="hidden md:hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/resume.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Resume</a>
-                <a href="/consulting.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Consulting</a>
-                <a href="/portfolio.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">Portfolio</a>
-                <a href="/about.html" class="block px-3 py-2 text-gray-900 font-semibold text-lg hover:text-black hover:bg-gray-50 transition-colors duration-200">About</a>
+        <div class="hidden md:hidden border-t border-gray-100 bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">Home</a>
+                <a href="consulting.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-tg-blue font-semibold font-medium hover:bg-gray-50">Work</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 font-medium hover:bg-gray-50">About</a>
+                <a href="mailto:timgut@gmail.com?subject=Project%20inquiry" class="block px-3 py-2 text-tg-blue font-semibold">Start a project &rarr;</a>
             </div>
         </div>
     </header>
-   
-    <main>
-        <div class="relative z-10">
-            <!-- Hero Image Section -->
-            <div class="w-full max-w-5xl mx-auto pt-40 pb-4">
-                <div class="relative rounded-2xl overflow-hidden shadow-lg mb-2">
-                    <img src="/img/portfolio-hero.jpg" alt="Portfolio Hero" class="w-full h-64 object-cover object-center" />
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <h2 class="text-4xl md:text-5xl font-bold text-white drop-shadow-lg text-center">Portfolio</h2>
-                    </div>
-                </div>
-            </div>
-            
-                        <div class="container mx-auto px-4 max-w-5xl pb-16">
-                <div class="bg-white/80 rounded-2xl shadow-lg p-8 md:p-12">
-                    <!-- Portfolio Card Grid Start -->
-                    <div class="w-full max-w-5xl mx-auto">
-                      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-cards">
-                      
-                                                <!-- Project 1: Enterprise CMS -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-server text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Enterprise CMS</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> 
-Designed, built and currently maintain proprietary, enterprise-level content management system (named "AMPS") customized for rapid site creation and deployment. Built in Ruby on Rails, AMPS utilizes a React-based user-interface to host and serve 300+ websites involving 1,500+ site editors over more than a decade of service. AMPS boasts a feature suite similar to WordPress and other open-source CMS products (asset management, theme templating, WYWIWYG publication, taxonomy structures, user permissions levels, etc). The entire architecture is maintained at Amazon Web Services, and sites are easily configurable with Cloudfront and S3.
-</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> Ruby on Rails, MySQL, React, SASS, Webpacker, RubyGems, AWS (Cloudfront, RDS, ELB, EC2, S3), Let's Encrypt (SSL management)</p>
-                        </div>
-                      
-                                                <!-- Project 2: Amazon Web Services Management -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-cloud text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Amazon Web Services Management</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Develop and maintain the cloud infrastructure for a CMS platform and other applications hosted on AWS, supporting multiple client websites. The system runs on load-balanced EC2 instances with a managed RDS backend, and delivers front-end content via S3 and CloudFront for global performance. Responsibilities include infrastructure configuration, environment monitoring with CloudWatch, DNS management through Route 53, and implementation of secure IAM access controls. Long-term hosting costs are optimized through the use of reserved instances for both compute and database services.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> EC2, RDS (MySQL), Cloudfront, S3, ELB, Cloudwatch</p>
-                        </div>
-                      
-                                                <!-- Project 3: Front-End Development -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-laptop-code text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Front-End Development</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> In my daily work, I build front-end applications for clients using Javascript, HTML and CSS. These projects are built to client specifications and are portable enough to be hosted anywhere (internal CMS, Wordpress, S3, etc.) Examples include a <a class="text-tg-blue underline" title="Google Maps implementation" href="https://gunindustryaccountability.org/map/" target="_blank" rel="noopener">Google Maps implementation</a> that allows users to search for weapons dealers near their homes, a <a class="text-tg-blue underline" title="legislative scorecard" href="https://scorecard.afscme.org/" target="_blank" rel="noopener">legislative scorecard</a> that tracks U.S. House and Senate votes by member on key constituent issues and a <a class="text-tg-blue underline" title="wage calculator" href="https://afscme.org/union-wages" target="_blank" rel="noopener">wage calculator</a> that compares salary information across demographic characters of union vs. non-union employees.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> Javascript (React, jQuery, Typescript), CSS (Flexbox, Tailwind), HTML, MySQL, PHP, Wordpress, REST APIs</p>
-                        </div>
-                      
-                                                <!-- Project 4: Wordpress Development -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-wordpress text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Wordpress Development</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Build client sites in WordPress with custom themes and both native and custom blocks, leveraging a range of front-end plugins like Advanced Custom Fields (ACF), Gravity Forms, Kadence, Advanced Query Loop, WP All Import and more, as required. Migrate existing sites from third-party CMS tools into Wordpress utilizing custom scripting and WP All Import Pro. Build front-end features to client specifications, working with internal and client site designers.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> WPEngine, WP plugins, React</p>
-                        </div>
-                      
-                                                <!-- Project 5: Custom Application Development -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-cubes text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Custom Application Development</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Create custom web applications per client specification including a database tracking foster children eligible for adoption, an organizing "toolkit" which allows client employees to generate customized marketing tools (e.g., flyers, posters, mailers, charts, etc), Google and other map implementations to show regional or state spending or resource allotment, social media integrations for sharing existing posts on client sites or applications, and more.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> React, Ruby on Rails, AWS, PHP, HTML/CSS/JS, Docker</p>
-                        </div>
-                      
-                                                <!-- Project 6: RESTful APIs -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-network-wired text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">RESTful APIs</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Integrate RESTful APIs to support internal tooling and automate workflows. Implemented custom integrations with the Asana API to streamline task and project management, and connected to eCRM platforms like Action Network, Mailchimp and EveryAction to sync supporter data and automate campaign actions. Familiar with OAuth-based authentication flows and the use of webhooks to handle real-time event updates across systems.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> REST APIs (Asana, Harvest, ActionNetwork, etc), cURL, Postman, HAL, AJAX, PHP</p>
-                        </div>
-                      
-                                                <!-- Project 7: Federal Subcontractor -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-flag-usa text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">Federal Subcontractor</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Worked as a certified governmental subcontractor for the Office of Adolescent Health. Managed website production and maintenance, built "e-learning" modules that provided certification documents for end users using HTML/JS/CSS. Worked with vendors and government staff on budgeting (from $250-500K) and project delivery.</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> Percussion CMS, Jenkins, HTML/JS/CSS</p>
-                        </div>
-                      
-                                                <!-- Project 8: High-Profile Site Builds -->
-                        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 opacity-0 translate-y-8 transition duration-700 ease-out">
-                          <div class="flex items-center gap-3 mb-2">
-                            <i class="fas fa-star text-2xl text-tg-blue"></i>
-                            <h3 class="text-xl font-semibold text-tg-blue">High-Profile Site Builds</h3>
-                          </div>
-                          <p class="text-gray-900 text-base mb-1"><span class="font-semibold">Description:</span> Work with high-profile client base to build and maintain public-facing websites, ensuring high availability and security. Past clients have included presidential candidates (Jay Inslee, Elizabeth Warren), professional sports teams and leagues (NFL, MLB, NHL), media properties, and not-for-profit advocacy organizations (No More, Dave Thomas Foundation, Robert Wood Johnson Foundation).</p>
-                          <hr class="my-2 border-tg-blue/20">
-                          <p class="text-gray-700 text-sm"><span class="font-semibold">Technology Stack:</span> AWS Cloudfront, Fastly, Cloudflare, Azure</p>
-                        </div>
-                      
-                     </div>
-                    </div>
-                    <!-- Portfolio Card Grid End -->
-                    <script>
-                    // Fade-in animation for cards
-                    document.addEventListener('DOMContentLoaded', function() {
-                      const cards = document.querySelectorAll('#portfolio-cards > div');
-                      const observer = new window.IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                          if (entry.isIntersecting) {
-                            entry.target.classList.add('opacity-100', 'translate-y-0');
-                            entry.target.classList.remove('opacity-0', 'translate-y-8');
-                            observer.unobserve(entry.target);
-                          }
-                        });
-                      }, { threshold: 0.15 });
-                      cards.forEach(card => observer.observe(card));
-                    });
-                    </script>
-                </div>
-            </div>
-            
-        </div>
-    </main>
 
-   <!-- Footer Section -->
-    <footer class="bg-tg-blue text-white py-6">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-2 md:mb-0">
-                        <p class="text-tg-yellow-dark">© 2026 Tim Gutowski. All rights reserved.</p>
-                        <!--p class="text-tg-yellow-dark text-xs mt-1">Photo by <a href="https://unsplash.com/@cdr6934?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors">Chris Ried</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-code-on-it-ieic5Tq8YMk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" class="hover:text-white transition-colors">Unsplash</a></p-->
-                        
-                    </div>
-                    <div class="flex space-x-6">
-                        <a href="https://github.com/timgut" class="text-tg-yellow hover:text-white"><i class="fab fa-github text-2xl"></i></a>
-                        <a href="https://www.linkedin.com/in/timgutowski/" class="text-tg-yellow hover:text-white"><i class="fab fa-linkedin text-2xl"></i></a>
-                        <a href="mailto:timgut@gmail.com" class="text-tg-yellow hover:text-white"><i class="fas fa-envelope text-2xl"></i></a>
-                    </div>
+    <main class="pt-24">
+        <section class="container mx-auto max-w-5xl px-4 pt-12 pb-10">
+            <h1 class="font-serif text-4xl font-bold mb-4">Work</h1>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl">Two recent independent engagements in depth, then a sampling of what 25+ years of building for the web looks like.</p>
+        </section>
+
+        <section class="container mx-auto max-w-5xl px-4 grid gap-10">
+            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden md:grid md:grid-cols-2" id="silica-safe">
+                <img src="img/silica-safe-org-thumbnail.png" alt="Screenshot of silica-safe.org" class="w-full h-full object-cover object-top border-b md:border-b-0 md:border-r border-gray-200">
+                <div class="p-8">
+                    <p class="font-mono text-xs text-tg-blue mb-2">CPWR &middot; silica-safe.org</p>
+                    <h2 class="font-serif text-2xl font-bold mb-3">Silica-Safe planning tool</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Built from the ground up: a WordPress site that helps contractors plan for working safely with silica-producing materials &mdash; grinding cement, cutting block, and similar tasks. Its centerpiece is a fully custom planning tool that walks users through a multi-step form and generates a detailed safety plan annotated to their specific circumstances, with links to relevant official government guidance. Supports user accounts; finished plans can be saved, exported to PDF, or emailed.</p>
+                    <p class="font-mono text-xs text-gray-500">WordPress &middot; custom plugin development &middot; PHP &middot; JavaScript &middot; MySQL</p>
                 </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden md:grid md:grid-cols-2" id="afscme">
+                <div class="p-8 order-2 md:order-1">
+                    <p class="font-mono text-xs text-tg-blue mb-2">AFSCME &middot; rebuilding now for the 2026 cycle</p>
+                    <h2 class="font-serif text-2xl font-bold mb-3">Legislative scorecard</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">For one of the nation&rsquo;s largest public-service unions: a scorecard that tracks the voting record of every member of the U.S. House and Senate and grades each legislator on alignment with the union&rsquo;s priorities. Front-end data manipulation and UX work backed by a legislator bio data feed, with IP-based geolocation landing visitors on their own state&rsquo;s delegation. I&rsquo;m currently rebuilding it for the 2026 election cycle as an independent consultant.</p>
+                    <p class="font-mono text-xs text-gray-500">JavaScript &middot; HTML/CSS &middot; REST APIs &middot; IP geolocation</p>
+                </div>
+                <img src="img/scorecard-afscme-org-thumbnail.png" alt="Screenshot of the AFSCME legislative scorecard" class="w-full h-full object-cover object-top border-b md:border-b-0 md:border-l border-gray-200 order-1 md:order-2">
+            </div>
+        </section>
+
+        <section class="container mx-auto max-w-5xl px-4 mt-16">
+            <h2 class="font-serif text-3xl font-bold mb-2">Selected work, 1999&ndash;present</h2>
+            <p class="text-sm text-gray-600 mb-8">Work led or built across agency, university, and subcontractor roles.</p>
+            <div class="grid gap-6 md:grid-cols-2">
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-database text-tg-blue mr-2"></i>Enterprise CMS (AMPS)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Designed, built, and maintain a proprietary Rails CMS that has hosted 300+ websites for 1,500+ editors over more than a decade &mdash; asset management, templating, taxonomies, and granular permissions, on par with open-source CMS products.</p>
+                    <p class="font-mono text-xs text-gray-500">Ruby on Rails &middot; React &middot; MySQL &middot; AWS</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-cloud text-tg-blue mr-2"></i>AWS platform management</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Cloud infrastructure for a multi-site CMS platform: load-balanced EC2 with managed RDS, S3 + CloudFront delivery, CloudWatch monitoring, Route 53, IAM, and long-term cost optimization through reserved instances.</p>
+                    <p class="font-mono text-xs text-gray-500">EC2 &middot; RDS &middot; CloudFront &middot; S3 &middot; ELB &middot; CloudWatch</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-map-location-dot text-tg-blue mr-2"></i>Front-end advocacy tools</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">A Google Maps tool locating weapons dealers near users&rsquo; homes, a wage calculator comparing union and non-union pay across demographics, and other portable client tools hostable anywhere.</p>
+                    <p class="font-mono text-xs text-gray-500">JavaScript/React &middot; Tailwind &middot; PHP &middot; REST APIs</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fab fa-wordpress text-tg-blue mr-2"></i>WordPress development</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Client sites with custom themes and blocks; migrations from third-party CMS tools with custom scripting and WP All Import Pro; ACF, Gravity Forms, Kadence, and custom plugin work.</p>
+                    <p class="font-mono text-xs text-gray-500">WordPress &middot; WPEngine &middot; PHP &middot; React</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-plug text-tg-blue mr-2"></i>REST API integrations</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Internal tooling on the Asana and Harvest APIs; eCRM connections to Action Network, Mailchimp, and EveryAction for supporter sync and campaign automation; OAuth and webhook-driven flows.</p>
+                    <p class="font-mono text-xs text-gray-500">REST &middot; OAuth &middot; webhooks &middot; PHP &middot; Rails</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-landmark text-tg-blue mr-2"></i>Federal subcontracting</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Certified governmental subcontractor for the Office of Adolescent Health: site production, e-learning certification modules, and delivery on $250&ndash;500K budgets with government stakeholders.</p>
+                    <p class="font-mono text-xs text-gray-500">Percussion CMS &middot; Jenkins &middot; HTML/JS/CSS</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-shield-halved text-tg-blue mr-2"></i>High-profile site builds</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">Public-facing sites with high availability and security requirements for presidential candidates (Inslee, Warren), the NFL, MLB, and NHL, media properties, and national nonprofits like RWJF.</p>
+                    <p class="font-mono text-xs text-gray-500">CloudFront &middot; Fastly &middot; Cloudflare &middot; Azure</p>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6">
+                    <h3 class="font-semibold mb-2"><i class="fas fa-cubes text-tg-blue mr-2"></i>Custom applications</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">A foster-adoption tracking database, an organizing toolkit generating customized marketing materials, mapping and social integrations, and more &mdash; each built to spec.</p>
+                    <p class="font-mono text-xs text-gray-500">React &middot; Rails &middot; AWS &middot; Docker</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mx-auto max-w-5xl px-4 mt-14">
+            <div class="bg-tg-blue rounded-2xl px-8 py-10 text-center">
+                <h2 class="font-serif text-2xl font-bold text-white mb-6">Want something like this?</h2>
+                <a href="mailto:timgut@gmail.com?subject=Project%20inquiry" class="bg-tg-yellow hover:bg-tg-yellow-dark text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"><i class="fas fa-envelope mr-2"></i>Start the conversation</a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-gray-300 mt-20">
+        <div class="container mx-auto max-w-6xl px-4 py-12 grid gap-10 md:grid-cols-3">
+            <div>
+                <p class="font-serif font-bold text-white text-lg mb-2">Tim Gutowski</p>
+                <p class="text-sm leading-relaxed">Custom web tools for unions, nonprofits, and advocacy organizations &mdash; plus WordPress rescues and Rails/React application work. Based in Chicago, working everywhere.</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Site</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="consulting.html" class="hover:text-tg-yellow">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-tg-yellow">Work</a></li>
+                    <li><a href="about.html" class="hover:text-tg-yellow">About</a></li>
+                    <li><a href="resume.html" class="hover:text-tg-yellow">Resume</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Contact</p>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="mailto:timgut@gmail.com" class="hover:text-tg-yellow"><i class="fas fa-envelope mr-2 text-tg-yellow"></i>timgut@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/timgutowski/" class="hover:text-tg-yellow"><i class="fab fa-linkedin mr-2 text-tg-yellow"></i>linkedin.com/in/timgutowski</a></li>
+                    <li><a href="https://github.com/timgut" class="hover:text-tg-yellow"><i class="fab fa-github mr-2 text-tg-yellow"></i>github.com/timgut</a></li>
+                    <li><span><i class="fas fa-location-dot mr-2 text-tg-yellow"></i>Chicago, IL</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800">
+            <div class="container mx-auto max-w-6xl px-4 py-5 text-xs text-gray-500">
+                <p>&copy; 2026 Tim Gutowski. All rights reserved.</p>
+                
             </div>
         </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
