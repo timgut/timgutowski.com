@@ -1,0 +1,12 @@
+{
+  "name": "timgutowski.com",
+  "private": true,
+  "description": "Static site for timgutowski.com (GitHub Pages)",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/tailwind.input.css -o css/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/tailwind.input.css -o css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.14"
+  }
+}
