@@ -21,10 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Fade sections in as they scroll into view (skip when reduced motion is set).
-    // Sections already on screen when the page loads are left alone (animating them
-    // made the page flash: visible, then hidden, then fading back in). Sections below
-    // the fold are hidden right away and fade in when they're scrolled to.
+    // Page-load fade: CSS (css/styles.css) fades every section in from the first paint,
+    // so there's no flash. Here, sections that start below the fold are paused and
+    // hidden, then play the same fade when they're scrolled into view.
     // Sections marked data-reveal="gsap" are animated by GSAP below instead.
     if (!reduceMotion && 'IntersectionObserver' in window) {
         var firstPass = true;
@@ -33,13 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 var el = entry.target;
                 if (firstPass) {
                     if (entry.isIntersecting) {
-                        observer.unobserve(el);
+                        observer.unobserve(el); // on screen at load: let the CSS fade finish
                     } else {
                         el.classList.add('pre-reveal');
                     }
                 } else if (entry.isIntersecting) {
-                    el.classList.remove('pre-reveal');
-                    el.classList.add('animate-fade-in');
+                    el.classList.remove('pre-reveal'); // restarts the CSS fade
                     observer.unobserve(el);
                 }
             });
