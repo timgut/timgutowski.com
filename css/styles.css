@@ -146,3 +146,34 @@ section, main {
 .border-tg-card {
     border-color: #e5e7eb;
 } 
+
+/* Client list (Work page): thin rule above each group, small gold square bullets */
+.client-group {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+}
+
+.client-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.client-list li {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1.1rem;
+    break-inside: avoid;
+    line-height: 1.4;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.client-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #F7C948;
+}

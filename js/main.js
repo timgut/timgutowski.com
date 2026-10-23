@@ -19,8 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Fade sections in as they scroll into view (skip when reduced motion is set)
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Fade sections in as they scroll into view (skip when reduced motion is set).
+    // Sections marked data-reveal="gsap" are animated by GSAP below instead.
+    if (!reduceMotion && 'IntersectionObserver' in window) {
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -29,8 +32,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('main section').forEach(function (el) {
+        document.querySelectorAll('main section:not([data-reveal])').forEach(function (el) {
             observer.observe(el);
+        });
+    }
+
+    // Client list (Work page): each group's heading and names slide up and fade in
+    // as the group scrolls into view. Content stays visible if GSAP doesn't load.
+    if (!reduceMotion && window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('[data-reveal="gsap"] .client-group').forEach(function (group) {
+            gsap.from(group.querySelectorAll('h3, li'), {
+                opacity: 0,
+                y: 18,
+                duration: 0.55,
+                ease: 'power2.out',
+                stagger: 0.03,
+                scrollTrigger: { trigger: group, start: 'top 85%', once: true }
+            });
         });
     }
 });

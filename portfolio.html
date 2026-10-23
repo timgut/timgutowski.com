@@ -65,7 +65,7 @@
     <main class="pt-24">
         <section class="container mx-auto max-w-5xl px-4 pt-12 pb-10">
             <h1 class="font-serif text-4xl font-bold mb-4">Work</h1>
-            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl">Two recent independent engagements in depth, then a sampling of what 25+ years of building for the web looks like.</p>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl">A few projects in depth, a sampling of what 25+ years of building for the web looks like, and the organizations I&rsquo;ve built for along the way.</p>
         </section>
 
         <section class="container mx-auto max-w-5xl px-4 grid gap-10">
@@ -87,6 +87,23 @@
                     <p class="font-mono text-xs text-gray-500">JavaScript &middot; HTML/CSS &middot; REST APIs &middot; IP geolocation</p>
                 </div>
                 <img src="img/scorecard-afscme-org-thumbnail.png" alt="Screenshot of the AFSCME legislative scorecard" class="w-full h-full object-cover object-top border-b md:border-b-0 md:border-l border-gray-200 order-1 md:order-2">
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden md:grid md:grid-cols-2" id="wendys-wonderful-kids">
+                <div class="bg-tg-blue text-white p-8 flex flex-col justify-center gap-6">
+                    <i class="fas fa-house-user text-4xl text-tg-yellow" aria-hidden="true"></i>
+                    <p class="font-serif text-2xl font-bold leading-snug">Helping children in foster care find permanent families.</p>
+                    <ul class="space-y-3 text-sm text-blue-100">
+                        <li class="flex gap-3"><i class="fas fa-lock text-tg-yellow mt-1" aria-hidden="true"></i><span>Secure, role-based access for program staff and evaluators</span></li>
+                        <li class="flex gap-3"><i class="fas fa-chart-column text-tg-yellow mt-1" aria-hidden="true"></i><span>Reporting that supports the program&rsquo;s national evaluation</span></li>
+                        <li class="flex gap-3"><i class="fas fa-right-left text-tg-yellow mt-1" aria-hidden="true"></i><span>Documented and handed off to a new host in 2023</span></li>
+                    </ul>
+                </div>
+                <div class="p-8">
+                    <p class="font-mono text-xs text-tg-blue mb-2">Dave Thomas Foundation for Adoption &middot; Child Trends</p>
+                    <h2 class="font-serif text-2xl font-bold mb-3">Wendy&rsquo;s Wonderful Kids database</h2>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">As lead developer, I built and supported the secure web application and database behind Wendy&rsquo;s Wonderful Kids, the Dave Thomas Foundation for Adoption&rsquo;s signature program for finding permanent homes for children in foster care. Recruiters around the country used it to track their work with each child, and evaluators at Child Trends relied on its reporting to measure what worked. When hosting moved to the American Institutes for Research in 2023, I documented the system and handed over the codebase so the program never skipped a beat.</p>
+                    <p class="font-mono text-xs text-gray-500">Custom web application &middot; database &middot; reporting &middot; role-based access</p>
+                </div>
             </div>
         </section>
 
@@ -131,8 +148,114 @@
                 </div>
                 <div class="bg-white rounded-xl border border-gray-200 p-6">
                     <h3 class="font-semibold mb-2"><i class="fas fa-cubes text-tg-blue mr-2"></i>Custom applications</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed mb-3">A foster-adoption tracking database, an organizing toolkit generating customized marketing materials, mapping and social integrations, and more &mdash; each built to spec.</p>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-3">An organizing toolkit that generates customized marketing materials, a memorial wall with more than 1,500 firefighter bios, mapping and social integrations, and more &mdash; each built to spec.</p>
                     <p class="font-mono text-xs text-gray-500">React &middot; Rails &middot; AWS &middot; Docker</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients: grouped list; groups fade/slide in with GSAP ScrollTrigger (see js/main.js) -->
+        <section class="container mx-auto max-w-5xl px-4 mt-16" id="clients" data-reveal="gsap">
+            <p class="font-mono text-xs text-tg-blue mb-2">// the full list</p>
+            <h2 class="font-serif text-3xl font-bold mb-2">Organizations I&rsquo;ve built for</h2>
+            <p class="text-sm text-gray-600 mb-8">Directly and through agency partners, 1999&ndash;present.</p>
+            <div class="grid gap-10">
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Labor</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>AFSCME</li>
+                        <li>AFSCME Council 31</li>
+                        <li>Amalgamated Transit Union</li>
+                        <li>California Professional Firefighters</li>
+                        <li>Carpenters</li>
+                        <li>Chicago Federation of Labor</li>
+                        <li>Chicago Teachers Union</li>
+                        <li>CPWR &ndash; The Center for Construction Research and Training</li>
+                        <li>Culinary Workers Union Local 226</li>
+                        <li>Illinois AFL-CIO</li>
+                        <li>National Association of Letter Carriers</li>
+                        <li>National College Players Association</li>
+                        <li>National Postal Mail Handlers Union</li>
+                        <li>SEIU Local 221</li>
+                        <li>UNITE HERE</li>
+                        <li>United Steelworkers (U.S. and Canada)</li>
+                    </ul>
+                </div>
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Nonprofits &amp; foundations</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>Boston Medical Center (Vital Village)</li>
+                        <li>California Fire Foundation</li>
+                        <li>Center for Law and Social Policy (CLASP)</li>
+                        <li>Center for the Study of Social Policy</li>
+                        <li>Child Trends</li>
+                        <li>Clinton Foundation (Too Small to Fail)</li>
+                        <li>Community Catalyst</li>
+                        <li>Dave Thomas Foundation for Adoption</li>
+                        <li>Doris Day Animal Foundation</li>
+                        <li>Evergreen Action</li>
+                        <li>Latino Policy Forum</li>
+                        <li>Lawyers&rsquo; Committee for Civil Rights Under Law</li>
+                        <li>League of Conservation Voters</li>
+                        <li>Malala Fund</li>
+                        <li>National Skills Coalition</li>
+                        <li>Robert Wood Johnson Foundation</li>
+                        <li>Student Defense</li>
+                        <li>The Union (International Union Against Tuberculosis and Lung Disease)</li>
+                        <li>Trust for Public Land</li>
+                        <li>Violence Policy Center</li>
+                        <li>VoteVets</li>
+                    </ul>
+                </div>
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Campaigns &amp; political</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>Elizabeth Warren for President</li>
+                        <li>Jay Inslee for President</li>
+                        <li>Democratic Congressional Campaign Committee (DCCC)</li>
+                        <li>Democratic Governors Association</li>
+                        <li>Democratic Majority for Israel (DMFI)</li>
+                        <li>End Citizens United</li>
+                        <li>Senate Majority PAC</li>
+                        <li>Sen. Chuck Schumer</li>
+                        <li>Sen. Maria Cantwell</li>
+                        <li>Sen. Jack Reed</li>
+                        <li>Sen. Patrick Leahy</li>
+                        <li>Sen. Cory Booker</li>
+                        <li>Fiona Ma for California</li>
+                        <li>Emily Sirota for Colorado</li>
+                        <li>Mammen Group</li>
+                        <li>California ballot measure campaigns</li>
+                    </ul>
+                </div>
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Sports, arts &amp; entertainment</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>NFL, MLB, NHL &amp; MLS team sites</li>
+                        <li>Atlanta Falcons / Mercedes-Benz Stadium</li>
+                        <li>Don Schumacher Racing</li>
+                        <li>Writers Theatre</li>
+                    </ul>
+                </div>
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Government &amp; education</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>U.S. Office of Adolescent Health (HHS)</li>
+                        <li>University of Chicago</li>
+                    </ul>
+                </div>
+                <div class="client-group">
+                    <h3 class="font-serif text-xl font-bold text-tg-blue mb-4">Media &amp; commercial</h3>
+                    <ul class="client-list columns-1 sm:columns-2 lg:columns-3 gap-x-10">
+                        <li>cars.com</li>
+                        <li>The Washington Post</li>
+                        <li>FOX Sports</li>
+                        <li>Britannica</li>
+                        <li>National Restaurant Association</li>
+                        <li>Autonomous Vehicle Industry Association</li>
+                        <li>Elias Law Group</li>
+                        <li>Newstead Group</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -176,6 +299,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
