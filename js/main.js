@@ -37,6 +37,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Work page cards ("More of what I build"): each row of cards slides up and fades in
+    // as it scrolls into view. Cards start hidden only once GSAP has loaded.
+    if (!reduceMotion && window.gsap && window.ScrollTrigger) {
+        gsap.registerPlugin(ScrollTrigger);
+        var cards = document.querySelectorAll('[data-reveal="gsap"] .reveal-cards > *');
+        if (cards.length) {
+            gsap.set(cards, { opacity: 0, y: 24 });
+            ScrollTrigger.batch(cards, {
+                start: 'top 88%',
+                once: true,
+                onEnter: function (batch) {
+                    gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', stagger: 0.1 });
+                }
+            });
+        }
+    }
+
     // Client list (Work page): each group's heading and names slide up and fade in
     // as the group scrolls into view. Content stays visible if GSAP doesn't load.
     if (!reduceMotion && window.gsap && window.ScrollTrigger) {
