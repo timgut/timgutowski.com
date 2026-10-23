@@ -22,15 +22,28 @@ document.addEventListener('DOMContentLoaded', function () {
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Fade sections in as they scroll into view (skip when reduced motion is set).
+    // Sections already on screen when the page loads are left alone (animating them
+    // made the page flash: visible, then hidden, then fading back in). Sections below
+    // the fold are hidden right away and fade in when they're scrolled to.
     // Sections marked data-reveal="gsap" are animated by GSAP below instead.
     if (!reduceMotion && 'IntersectionObserver' in window) {
+        var firstPass = true;
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                    observer.unobserve(entry.target);
+                var el = entry.target;
+                if (firstPass) {
+                    if (entry.isIntersecting) {
+                        observer.unobserve(el);
+                    } else {
+                        el.classList.add('pre-reveal');
+                    }
+                } else if (entry.isIntersecting) {
+                    el.classList.remove('pre-reveal');
+                    el.classList.add('animate-fade-in');
+                    observer.unobserve(el);
                 }
             });
+            firstPass = false;
         }, { threshold: 0.1 });
         document.querySelectorAll('main section:not([data-reveal])').forEach(function (el) {
             observer.observe(el);

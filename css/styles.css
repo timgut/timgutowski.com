@@ -27,6 +27,12 @@ html {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Below-the-fold sections wait here until they scroll into view (see js/main.js) */
+.pre-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 /* Custom hover effects */
 .hover-lift {
     transition: transform 0.2s ease-in-out;
