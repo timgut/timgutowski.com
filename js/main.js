@@ -21,9 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Page-load fade: CSS (css/styles.css) fades every section in from the first paint,
-    // so there's no flash. Here, sections that start below the fold are paused and
-    // hidden, then play the same fade when they're scrolled into view.
+    // Page-load fade: CSS (css/styles.css) fades on-screen sections in place from the
+    // first paint (no slide, so nothing jumps). Here, sections that start below the
+    // fold are hidden, then fade up when they're scrolled into view. A section counts
+    // as on screen as soon as any of it shows (threshold 0), so a tall section that
+    // peeks in at the bottom isn't left as a blank band until 10% of it is visible.
     // Sections marked data-reveal="gsap" are animated by GSAP below instead.
     if (!reduceMotion && 'IntersectionObserver' in window) {
         var firstPass = true;
@@ -37,13 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         el.classList.add('pre-reveal');
                     }
                 } else if (entry.isIntersecting) {
-                    el.classList.remove('pre-reveal'); // restarts the CSS fade
+                    el.classList.remove('pre-reveal');
+                    el.classList.add('revealed');
                     observer.unobserve(el);
                 }
             });
             firstPass = false;
-        }, { threshold: 0.1 });
-        document.querySelectorAll('main section:not([data-reveal])').forEach(function (el) {
+        }, { threshold: 0 });
+        document.querySelectorAll('main > section:not([data-reveal])').forEach(function (el) {
             observer.observe(el);
         });
     }

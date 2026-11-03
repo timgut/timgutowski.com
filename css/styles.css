@@ -27,22 +27,29 @@ html {
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Page-load fade: every section fades up from the first paint (no flash).
-   Sections that start below the fold are paused by js/main.js (.pre-reveal)
-   and play the fade when scrolled into view. GSAP-animated sections are excluded. */
+/* Page-load fade: sections on screen at load fade in place (opacity only, no
+   slide), so the page doesn't jump up on every page load, even while web fonts
+   swap in. Sections that start below the fold are hidden by js/main.js
+   (.pre-reveal) and fade up (.revealed) when scrolled into view. GSAP-animated
+   sections are excluded. */
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     main > section:not([data-reveal]) {
-        animation: fadeIn 0.6s ease-out both;
-    }
-
-    main > section:not([data-reveal]):nth-of-type(2) {
-        animation-delay: 0.08s;
+        animation: pageFadeIn 0.35s ease-out both;
     }
 
     main > section.pre-reveal {
         animation: none;
         opacity: 0;
         transform: translateY(20px);
+    }
+
+    main > section.revealed {
+        animation: fadeIn 0.6s ease-out both;
     }
 }
 
