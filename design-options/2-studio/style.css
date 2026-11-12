@@ -1,0 +1,66 @@
+/* Design option: Bold studio */
+body{font:400 18px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:.98;margin:0}
+header.st{background:var(--primary);color:var(--onprimary)}
+.hd{display:flex;align-items:center;gap:28px;min-height:84px}
+.brand{font:900 26px/1 Archivo,sans-serif;color:var(--onprimary);text-decoration:none;margin-right:auto;letter-spacing:-.02em}
+.brand span{color:var(--accent)}
+.nav{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav a{color:var(--onprimary);text-decoration:none;font-weight:600;font-size:16px;padding:10px 14px;border-radius:999px}
+.nav a[aria-current]{box-shadow:inset 0 0 0 2px var(--onprimary)}
+.hd-cta{background:var(--accent);color:var(--onaccent);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;font-size:16px}
+.hero{background:var(--primary);color:var(--onprimary);padding:72px 0 0;overflow:hidden}
+.hero .eb{font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--onprimary);opacity:.9;margin:0 0 24px}
+.hero h1{color:var(--onprimary);font-size:clamp(52px,9vw,128px);max-width:11ch}
+.hero h1 mark{background:var(--accent);color:var(--onaccent);padding:0 .12em;border-radius:.08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;padding:48px 0 72px}
+.hero-row p{font-size:20px;margin:0;max-width:30em}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.btn{display:inline-block;padding:16px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px}
+.btn.y{background:var(--accent);color:var(--onaccent)}.btn.o{border:2px solid currentColor;color:inherit}
+.btn.p{background:var(--primary);color:var(--onprimary)}
+.band{background:var(--accent);color:var(--onaccent);padding:20px 0;font:800 22px/1.2 Archivo,sans-serif;letter-spacing:-.01em}
+.band ul{display:flex;flex-wrap:wrap;gap:8px 28px;list-style:none;margin:0;padding:0}
+.band li::after{content:"✦";margin-left:28px;font-size:16px;vertical-align:middle}.band li:last-child::after{content:none}
+.sec{padding:110px 0}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px}
+.sec-h h2{font-size:clamp(44px,6vw,84px)}
+.more{font-weight:700;color:var(--primary);text-underline-offset:6px;text-decoration-thickness:2px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none;margin:0;padding:0}
+.tiles li{background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:28px;transition:transform .2s,box-shadow .2s}
+.tiles li:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--ink)}
+.tiles .ic{width:56px;height:56px;border-radius:16px;background:var(--tint);color:var(--primary);display:grid;place-items:center;margin-bottom:22px}
+.tiles h3{font-size:28px;margin-bottom:10px}.tiles p{margin:0;color:var(--muted)}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{border-radius:24px;overflow:hidden;background:var(--tint);display:flex;flex-direction:column}
+.card .fig{padding:36px 36px 0}.card .fig img{border-radius:12px 12px 0 0}
+.card .tx{background:var(--surface);padding:28px 32px 32px;border-top:2px solid var(--ink);flex:1}
+.card .cl{font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin:0 0 10px}
+.card h3{font-size:36px;margin-bottom:12px}.card p{margin:0 0 12px;color:var(--muted)}
+.tags{font-size:14px;font-weight:600;color:var(--ink)!important}
+.wwk{background:var(--deep);color:var(--ondeep);min-height:280px;border-radius:12px 12px 0 0;padding:32px;display:flex;flex-direction:column;justify-content:flex-end}
+.wwk p{font:800 30px/1.05 Archivo,sans-serif;margin:16px 0 0}
+.deep{background:var(--deep);color:var(--ondeep)}
+.deep h2{color:var(--ondeep)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;list-style:none;margin:0;padding:0}
+.steps b{display:block;font:900 120px/.8 Archivo,sans-serif;color:var(--accent);margin-bottom:20px}
+.steps h3{font-size:34px;color:var(--ondeep);margin-bottom:10px}.steps p{color:var(--deepmuted);margin:0}
+.cta{padding:96px 0}
+.cta-box{background:var(--accent);color:var(--onaccent);border-radius:32px;padding:72px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:end}
+.cta-box h2{font-size:clamp(44px,6vw,88px)}.cta-box p{margin:0 0 24px;font-size:19px}
+footer.st{background:var(--ink);color:var(--bg);padding:48px 0 120px;font-size:15px}
+.ft{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline}
+.ft-name{margin:0 auto 0 0;font:800 22px Archivo,sans-serif}.ft-name span{display:block;font:400 14px Inter,sans-serif;opacity:.85;margin-top:6px}
+.ft-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ft-small{width:100%;margin:8px 0 0;opacity:.8}
+footer.st :focus-visible{outline-color:var(--accent)}
+.pagehead{background:var(--primary);color:var(--onprimary);padding:72px 0 88px}
+.pagehead h1{color:var(--onprimary);font-size:clamp(64px,11vw,160px)}
+.pagehead p{font-size:21px;max-width:34em;margin:28px 0 0}
+.capg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.capg div{border-top:4px solid var(--primary);padding-top:16px}.capg h3{font-size:22px;margin-bottom:8px}.capg p{font-size:16px;color:var(--muted);margin:0 0 8px}
+.clients{columns:3;column-gap:48px}
+.cg{break-inside:avoid;margin-bottom:32px}.cg h3{font-size:24px;margin-bottom:10px}
+.cg ul{list-style:none;margin:0;padding:0}.cg li{padding:6px 0;border-bottom:1px solid var(--line);font-weight:500}
+@media (max-width:860px){.wrap{padding:0 20px}.hd{flex-wrap:wrap;gap:10px;padding:14px 0}.nav{order:3;width:100%;overflow-x:auto}.hero-row,.proj,.cta-box{grid-template-columns:1fr}.btns{justify-content:flex-start}.tiles,.steps,.capg{grid-template-columns:1fr}.clients{columns:1}.sec{padding:72px 0}.cta-box{padding:40px 28px}.steps b{font-size:84px}.card .fig{padding:20px 20px 0}}
+.deep .cg li{border-color:rgba(255,255,255,.18)}.deep .cg h3{color:var(--accent)}

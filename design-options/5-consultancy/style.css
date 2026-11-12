@@ -1,0 +1,67 @@
+/* Design option: Consultancy */
+body{font:400 18px/1.7 'Plus Jakarta Sans',system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;letter-spacing:-.005em;color:var(--ink);margin:0;line-height:1.1}
+.eb{font:700 13px/1.4 'Plus Jakarta Sans',sans-serif;text-transform:uppercase;letter-spacing:.16em;color:var(--primary);margin:0 0 16px}
+header.cs{position:absolute;left:0;right:0;top:0;z-index:5}
+.hd{display:flex;align-items:center;gap:32px;min-height:96px;color:var(--ondeep)}
+.brand{font:400 26px 'DM Serif Display',serif;color:var(--ondeep);text-decoration:none;margin-right:auto}
+.nav{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav a{color:var(--ondeep);text-decoration:none;font-weight:500;font-size:16px;padding:6px 0}
+.nav a[aria-current]{box-shadow:inset 0 -2px var(--accent)}
+.hd-cta{border:1.5px solid var(--ondeep);color:var(--ondeep);padding:11px 20px;text-decoration:none;font-weight:600;font-size:15px;border-radius:2px}
+.hero{position:relative;min-height:640px;display:flex;align-items:flex-end;background:var(--deep);color:var(--ondeep);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28;filter:grayscale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--deep) 100%);opacity:.9}
+.hero .wrap{position:relative;z-index:2;padding-top:180px;padding-bottom:88px;width:100%}
+.hero .eb{color:var(--accent)}
+.hero h1{color:var(--ondeep);font-size:clamp(44px,6vw,80px);max-width:15ch;margin-bottom:28px}
+.hero p{color:var(--deepmuted);max-width:34em;margin:0 0 32px;font-size:20px}
+.btn{display:inline-block;background:var(--accent);color:var(--onaccent);padding:15px 26px;text-decoration:none;font-weight:700;border-radius:2px;font-size:16px}
+.btn.d{background:var(--primary);color:var(--onprimary)}
+.tl{color:var(--primary);font-weight:600;text-underline-offset:5px}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:112px 0;align-items:start}
+.intro h2{font-size:clamp(32px,3.6vw,46px)}
+.intro p{margin:0 0 18px;color:var(--muted)}
+.intro .links{display:flex;gap:28px;margin-top:8px}
+.how{background:var(--surface);padding:104px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.how h2{font-size:clamp(34px,4vw,52px);max-width:16ch;margin-bottom:56px}
+.how ol{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;list-style:none;margin:0;padding:0}
+.how li{border-top:1px solid var(--ink);padding-top:22px}
+.how .n{font:700 14px 'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;color:var(--primary)}
+.how h3{font-size:30px;margin:12px 0 12px}.how p{color:var(--muted);margin:0}
+.svc{padding:104px 0}
+.svc-g{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:40px}
+.svc-g div{padding:32px 32px 32px 0;border-bottom:1px solid var(--line)}
+.svc-g div:not(:nth-child(3n)){border-right:1px solid var(--line)}.svc-g div:not(:nth-child(3n+1)){padding-left:32px}
+.svc-g h3{font-size:26px;margin-bottom:10px}.svc-g p{color:var(--muted);margin:0;font-size:17px}
+.outcome{background:var(--tint);padding:96px 0}
+.outcome .bq{margin:0;font:400 clamp(28px,3.4vw,44px)/1.25 'DM Serif Display',serif;color:var(--ink);max-width:24em}
+.outcome strong{font-weight:400;background:linear-gradient(transparent 70%,var(--accent) 70%)}
+.case{padding:112px 0}
+.case-g{display:grid;grid-template-columns:1.15fr 1fr;gap:72px;align-items:center}
+.case img{box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.case h2{font-size:clamp(34px,4vw,50px);margin-bottom:20px}.case p{color:var(--muted);margin:0 0 18px}
+.second{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:center;margin-top:96px}
+.final{background:var(--deep);color:var(--ondeep);padding:112px 0;text-align:center}
+.final h2{color:var(--ondeep);font-size:clamp(38px,5vw,64px);margin-bottom:22px}
+.final p{color:var(--deepmuted);max-width:32em;margin:0 auto 32px}
+footer.cs{background:var(--deep);color:var(--deepmuted);border-top:1px solid rgba(255,255,255,.15);padding:48px 0 120px;font-size:15px}
+footer.cs a{color:var(--ondeep)}
+.ft{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline}
+.ft-name{margin:0 auto 0 0;color:var(--ondeep);font:400 24px 'DM Serif Display',serif}.ft-name span{display:block;font:400 14px 'Plus Jakarta Sans',sans-serif;color:var(--deepmuted)}
+.ft-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ft-small{width:100%;margin:6px 0 0}
+footer.cs :focus-visible{outline-color:var(--accent)}
+.wwk{background:var(--deep);color:var(--ondeep);aspect-ratio:4/3;padding:40px;display:flex;flex-direction:column;justify-content:flex-end}
+.wwk p{font:400 32px/1.15 'DM Serif Display',serif;margin:16px 0 0}
+.pagehead{background:var(--deep);color:var(--ondeep);padding:200px 0 88px}
+.pagehead .eb{color:var(--accent)}.pagehead h1{color:var(--ondeep);font-size:clamp(48px,7vw,88px);margin-bottom:24px}.pagehead p{color:var(--deepmuted);max-width:36em;font-size:20px;margin:0}
+.cases{padding:96px 0 0}
+.cases article{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;padding-bottom:88px}
+.cases article:nth-child(even) > :first-child{order:2}
+.cases h2{font-size:clamp(32px,3.6vw,46px);margin-bottom:16px}.cases p{color:var(--muted);margin:0 0 14px}
+.tags{font-size:14px;font-weight:600;color:var(--ink)!important;letter-spacing:.02em}
+.clients{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 56px;margin-top:40px}
+.cg h3{font-size:24px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}
+.cg ul{list-style:none;margin:0;padding:0;font-size:16px;color:var(--muted)}.cg li{padding:3px 0}
+@media (max-width:860px){.wrap{padding:0 20px}.hd{flex-wrap:wrap;gap:10px 20px;padding:16px 0}.nav{order:3;width:100%;gap:20px}.hero{min-height:560px}.intro,.case-g,.second,.cases article{grid-template-columns:1fr;gap:32px}.cases article:nth-child(even) > :first-child{order:0}.how ol,.svc-g,.clients{grid-template-columns:1fr}.svc-g div{padding:24px 0!important;border-right:0!important}.intro{padding:72px 0}}

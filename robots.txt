@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /design-options/
 
 Sitemap: https://timgutowski.com/sitemap.xml
