@@ -1,6 +1,6 @@
 # Design options (review only)
 
-Five design directions for the timgutowski.com redesign, at /design-options/. These pages are
+Three design directions (options 2, 4, and 5; 1 and 3 were dropped 11/12) for the timgutowski.com redesign, at /design-options/. These pages are
 `noindex`, blocked in robots.txt, and not linked from the site.
 
 - `index.html`: the review page; `preview.html`: phone-size view.

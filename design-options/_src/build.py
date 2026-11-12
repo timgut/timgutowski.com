@@ -31,7 +31,7 @@ for folder, key, name, fn, blurb in OPTIONS:
 cards = ""
 for i, (folder, key, name, fn, blurb) in enumerate(OPTIONS):
     cards += f'''<li class="opt"><a class="shot" href="{folder}/index.html" data-keep tabindex="-1" aria-hidden="true"><img src="shots/{folder}.png" alt="" width="1200" height="760" loading="lazy"></a>
-<div class="tx"><p class="num">Option {i+1}</p><h2><a href="{folder}/index.html" data-keep>{e(name)}</a></h2><p>{e(blurb)}</p>
+<div class="tx"><p class="num">Option {folder.split("-")[0]}</p><h2><a href="{folder}/index.html" data-keep>{e(name)}</a></h2><p>{e(blurb)}</p>
 <ul class="lk"><li><a href="{folder}/index.html" data-keep>Home</a></li><li><a href="{folder}/work.html" data-keep>Work</a></li><li><a href="preview.html?src={folder}/index.html" data-keep>Phone view</a></li></ul></div></li>'''
 pal_list = "".join(f'<li><span class="sw" style="background:linear-gradient(135deg,{p["primary"]} 0 50%,{p["accent"]} 50%)"></span>{e(p["label"])}</li>' for p in PALETTES.values())
 index = f'''<!doctype html><html lang="en" data-palette="classic" data-home="index.html"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
@@ -60,7 +60,7 @@ h1{{font-size:clamp(34px,4vw,48px);line-height:1.1;margin:0 0 16px;letter-spacin
 @media (max-width:820px){{.how,.opt{{grid-template-columns:1fr}}.wrap{{padding:32px 16px 120px}}}}
 </style><script src="assets/switcher.js"></script></head><body>
 <main id="main" class="wrap">
-<h1>Five design directions for timgutowski.com</h1>
+<h1>Three design directions for timgutowski.com</h1>
 <div class="intro"><p>Each option uses the same real content (homepage and Work page) so you can compare the look and feel, not the words. Nothing here is final: type, layout, and color can be mixed across options.</p>
 <p>Pick a palette with the color control just above the options (it also sits in the lower-left corner of every option page). Your choice follows you from page to page.</p></div>
 <div class="how"><div><h2>What to look for</h2><ul><li>Which one feels most like a consultant you&rsquo;d hire?</li><li>Which homepage tells you fastest what Tim does?</li><li>Anything you&rsquo;d steal from one option for another?</li></ul></div>

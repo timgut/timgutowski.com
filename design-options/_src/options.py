@@ -137,7 +137,7 @@ header.st{background:var(--primary);color:var(--onprimary)}
 .hero .eb{font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--onprimary);opacity:.9;margin:0 0 24px}
 .hero h1{color:var(--onprimary);font-size:clamp(52px,9vw,128px);max-width:11ch}
 .hero h1 mark{background:var(--accent);color:var(--onaccent);padding:0 .12em;border-radius:.08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.hero-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;padding:48px 0 72px}
+.hero-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;padding:48px 0 56px}
 .hero-row p{font-size:20px;margin:0;max-width:30em}
 .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
 .btn{display:inline-block;padding:16px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px}
@@ -177,7 +177,12 @@ footer.st{background:var(--ink);color:var(--bg);padding:48px 0 120px;font-size:1
 .ft-name{margin:0 auto 0 0;font:800 22px Archivo,sans-serif}.ft-name span{display:block;font:400 14px Inter,sans-serif;opacity:.85;margin-top:6px}
 .ft-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ft-small{width:100%;margin:8px 0 0;opacity:.8}
 footer.st :focus-visible{outline-color:var(--accent)}
-.pagehead{background:var(--primary);color:var(--onprimary);padding:72px 0 88px}
+.pagehead{background:var(--primary);color:var(--onprimary);padding:72px 0 0}
+.pagehead p{margin-bottom:56px!important}
+.photo{position:relative;margin:0;border-radius:28px 28px 0 0;overflow:hidden;aspect-ratio:1788/620;background:var(--deep)}
+.photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.photo::after{content:"";position:absolute;inset:0;background:var(--primary);mix-blend-mode:multiply;opacity:.7}
+.photo::before{content:"";position:absolute;right:6%;top:-40px;width:120px;height:120px;border-radius:50%;background:var(--accent);z-index:2;transform:translateY(50%)}
 .pagehead h1{color:var(--onprimary);font-size:clamp(64px,11vw,160px)}
 .pagehead p{font-size:21px;max-width:34em;margin:28px 0 0}
 .capg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -196,7 +201,7 @@ footer.st :focus-visible{outline-color:var(--accent)}
 <main id="main">
 <section class="hero on-primary"><div class="wrap"><p class="eb">{e(EYEBROW)}</p>
 <h1><mark>Right-sized</mark> tech for orgs big &amp; small.</h1>
-<div class="hero-row"><p>{e(LEDE)} {e(LEDE2)}</p><div class="btns"><a class="btn y" href="../../contact.html">Start a project</a><a class="btn o" href="work.html" data-keep>See the work</a></div></div></div></section>
+<div class="hero-row"><p>{e(LEDE)} {e(LEDE2)}</p><div class="btns"><a class="btn y" href="../../contact.html">Start a project</a><a class="btn o" href="work.html" data-keep>See the work</a></div></div><figure class="photo"><img src="../../img/portfolio-hero.jpg" alt="" width="1788" height="775"></figure></div></section>
 <div class="band" aria-label="Built for"><div class="wrap"><ul>{"".join(f"<li>{e(b)}</li>" for b in BUILT_FOR)}</ul></div></div>
 <section class="sec" aria-labelledby="s1"><div class="wrap"><div class="sec-h"><h2 id="s1">What I do</h2><a class="more" href="../../consulting.html">Services &amp; engagements</a></div><ul class="tiles">{tiles}</ul></div></section>
 <section class="sec" style="padding-top:0" aria-labelledby="s2"><div class="wrap"><div class="sec-h"><h2 id="s2">Recent work</h2><a class="more" href="work.html" data-keep>All work</a></div><div class="proj">{card(PROJECTS[0])}{card(PROJECTS[1])}</div></div></section>
@@ -206,7 +211,7 @@ footer.st :focus-visible{outline-color:var(--accent)}
 </main>''' + footer("st")
     work = header("st on-primary", "Work", brand) + f'''
 <main id="main">
-<section class="pagehead on-primary"><div class="wrap"><h1>Work.</h1><p>{e(WORK_INTRO)}</p></div></section>
+<section class="pagehead on-primary"><div class="wrap"><h1>Work.</h1><p>{e(WORK_INTRO)}</p><figure class="photo"><img src="../../img/portfolio-hero.jpg" alt="" width="1788" height="775"></figure></div></section>
 <section class="sec" aria-labelledby="fp"><h2 id="fp" class="sr-only">Featured projects</h2><div class="wrap"><div class="proj">{card(PROJECTS[0], True)}{card(PROJECTS[1], True)}</div><div class="proj" style="margin-top:24px;grid-template-columns:1fr">{card(PROJECTS[2], True)}</div></div></section>
 <section class="sec" style="padding-top:0" aria-labelledby="w2"><div class="wrap"><div class="sec-h"><h2 id="w2">More of what I build</h2></div>
 <div class="capg">{"".join(f"<div><h3>{e(t)}</h3><p>{e(d)}</p><p class='tags'>{e(s)}</p></div>" for t, d, s in CAPABILITIES)}</div></div></section>
@@ -377,7 +382,11 @@ footer.wm{background:var(--surface);border-top:1px solid var(--line);padding:48p
 .ft{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline}
 .ft-name{margin:0 auto 0 0;color:var(--ink);font:600 20px Fraunces,serif}.ft-name span{display:block;font:400 15px 'Source Sans 3',sans-serif;color:var(--muted)}
 .ft-links{display:flex;gap:24px;list-style:none;margin:0;padding:0}.ft-small{width:100%;margin:6px 0 0}
-.pagehead{padding:56px 0 64px;max-width:44em}.pagehead h1{font-size:clamp(44px,6vw,72px);margin:8px 0 20px}.pagehead p{color:var(--muted);font-size:21px;margin:0}
+.photo{position:relative;margin:0 0 28px;border-radius:40px;overflow:hidden;aspect-ratio:1788/700}
+.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) sepia(.12)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55))}
+.photo figcaption{position:absolute;left:32px;bottom:26px;z-index:2;color:#fff;font:600 22px/1.3 Fraunces,serif;max-width:22em}
+.pagehead{padding:56px 0 48px;max-width:44em}.pagehead h1{font-size:clamp(44px,6vw,72px);line-height:1.08;margin:8px 0 20px}.pagehead p{color:var(--muted);font-size:21px;margin:0}
 .capw{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .capw div{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}.capw h3{font-size:22px;margin-bottom:6px}.capw p{margin:0 0 8px;color:var(--muted);font-size:17px}
 .clients{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -395,6 +404,7 @@ footer.wm{background:var(--surface);border-top:1px solid var(--line);padding:48p
 <section class="hero"><div><p class="hi">Hi, I&rsquo;m Tim.</p><h1>I build right-sized technology for organizations big and small.</h1><p>{e(LEDE)}</p><p class="m">{e(LEDE2)}</p>
 <div class="btns"><a class="btn" href="../../contact.html">Tell me about your project</a><a class="btn s" href="work.html" data-keep>See my work</a></div></div>
 <div class="portrait"><div class="ph"><div><b>TG</b>Portrait of Tim goes here<br>(a warm, natural-light photo)</div></div><p class="sticker">Chicago-based. Working with clients across the country.</p></div></section>
+<figure class="photo"><img src="../../img/portfolio-hero.jpg" alt="" width="1788" height="775" loading="lazy"><figcaption>Planning, building, and handing off, from Chicago.</figcaption></figure>
 <section class="strip" aria-labelledby="bf"><h2 id="bf">Built for</h2><ul>{"".join(f"<li>{e(b)}</li>" for b in BUILT_FOR)}</ul></section>
 <section class="sec" aria-labelledby="s1"><div class="sec-h"><h2 id="s1">How I can help</h2><p>Most projects start with one of these. If yours doesn&rsquo;t fit neatly, that&rsquo;s fine too.</p></div><ul class="cards">{cards}</ul></section>
 <section class="sec" aria-labelledby="s2"><div class="sec-h"><h2 id="s2">A couple of recent projects</h2></div><div class="stories">{story(PROJECTS[0])}{story(PROJECTS[1])}</div></section>
@@ -404,6 +414,7 @@ footer.wm{background:var(--surface);border-top:1px solid var(--line);padding:48p
     work = header("wm", "Work", brand) + f'''
 <main id="main"><div class="wrap">
 <section class="pagehead"><p class="hi">The work</p><h1>Things I&rsquo;ve built, and who for.</h1><p>{e(WORK_INTRO)}</p></section>
+<figure class="photo"><img src="../../img/portfolio-hero.jpg" alt="" width="1788" height="775" loading="lazy"><figcaption>Software, websites, and data tools for mission-driven organizations.</figcaption></figure>
 <section class="sec" aria-labelledby="fp"><h2 id="fp" class="sr-only">Featured projects</h2><div class="stories">{"".join(story(p, True) for p in PROJECTS)}</div></section>
 <section class="sec" aria-labelledby="w2"><div class="sec-h"><h2 id="w2">More of what I build</h2></div><div class="capw">{"".join(f"<div><h3>{e(t)}</h3><p>{e(d)}</p><p class='tags'>{e(s)}</p></div>" for t, d, s in CAPABILITIES)}</div></section>
 <section class="sec" aria-labelledby="w3"><div class="sec-h"><h2 id="w3">Organizations I&rsquo;ve built for</h2><p>Directly and through agency partners.</p></div><div class="clients">{clients_html()}</div></section>
@@ -470,7 +481,10 @@ footer.cs a{color:var(--ondeep)}
 footer.cs :focus-visible{outline-color:var(--accent)}
 .wwk{background:var(--deep);color:var(--ondeep);aspect-ratio:4/3;padding:40px;display:flex;flex-direction:column;justify-content:flex-end}
 .wwk p{font:400 32px/1.15 'DM Serif Display',serif;margin:16px 0 0}
-.pagehead{background:var(--deep);color:var(--ondeep);padding:200px 0 88px}
+.pagehead{position:relative;overflow:hidden;background:var(--deep);color:var(--ondeep);padding:200px 0 88px}
+.pagehead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:grayscale(1);object-position:center 35%}
+.pagehead::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,var(--deep) 100%);opacity:.9}
+.pagehead .wrap{position:relative;z-index:2}
 .pagehead .eb{color:var(--accent)}.pagehead h1{color:var(--ondeep);font-size:clamp(48px,7vw,88px);margin-bottom:24px}.pagehead p{color:var(--deepmuted);max-width:36em;font-size:20px;margin:0}
 .cases{padding:96px 0 0}
 .cases article{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;padding-bottom:88px}
@@ -505,7 +519,7 @@ footer.cs :focus-visible{outline-color:var(--accent)}
         return f'<article><div>{fig}</div><div><p class="eb">{e(p["client"])}</p><h2>{e(p["title"])}</h2><p>{e(p["long"])}</p><p class="tags">{e(p["tags"])}</p></div></article>'
     work = header("cs on-deep", "Work", brand) + f'''
 <main id="main">
-<section class="pagehead on-deep"><div class="wrap"><p class="eb">Case studies</p><h1>Work</h1><p>{e(WORK_INTRO)}</p></div></section>
+<section class="pagehead on-deep"><img src="../../img/portfolio-hero.jpg" alt="" width="1788" height="775"><div class="wrap"><p class="eb">Case studies</p><h1>Work</h1><p>{e(WORK_INTRO)}</p></div></section>
 <div class="wrap"><section class="cases" aria-labelledby="fp"><h2 id="fp" class="sr-only">Featured projects</h2>{"".join(case(p) for p in PROJECTS)}</section></div>
 <section class="how" aria-labelledby="w2"><div class="wrap"><p class="eb">Capabilities</p><h2 id="w2">More of what I build</h2><div class="svc-g" style="margin-top:0">{"".join(f"<div><h3>{e(t)}</h3><p>{e(d)}</p></div>" for t, d, s in CAPABILITIES[:6])}</div></div></section>
 <section class="svc" aria-labelledby="w3"><div class="wrap"><p class="eb">Clients &amp; partners</p><h2 id="w3" style="font-size:clamp(34px,4vw,52px)">Organizations I&rsquo;ve built for</h2><div class="clients">{clients_html()}</div></div></section>
@@ -515,12 +529,8 @@ footer.cs :focus-visible{outline-color:var(--accent)}
 
 
 OPTIONS = [
-    ("1-editorial", "editorial", "Refined editorial", editorial,
-     "Serif headlines, generous white space, and magazine-style case studies. Calm, credible, and closest to today's site."),
     ("2-studio", "studio", "Bold studio", studio,
      "Big type, strong color blocks, and punchy project tiles. Reads like a design studio and shows confidence."),
-    ("3-swiss", "swiss", "Technical grid", swiss,
-     "A precise grid with mono accents, a spec-sheet feel, and an up-front accessibility statement. Signals engineering rigor."),
     ("4-warm", "warm", "Warm and human", warm,
      "Rounded shapes, a soft serif, and a first-person welcome built around a portrait. Approachable and personal."),
     ("5-consultancy", "consult", "Consultancy", consult,
