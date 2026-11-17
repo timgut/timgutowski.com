@@ -38,6 +38,15 @@
             .then(function (response) { return response.json(); })
             .then(function (result) {
                 if (result && result.ok) {
+                    if (window.tgTrack) {
+                        // Only the multiple-choice answers are sent, never names, emails, or messages.
+                        window.tgTrack('generate_lead', {
+                            form_name: 'contact',
+                            help_with: form.elements.help ? form.elements.help.value : '',
+                            budget: form.elements.budget ? form.elements.budget.value : '',
+                            timeline: form.elements.timeline ? form.elements.timeline.value : ''
+                        });
+                    }
                     form.classList.add('hidden');
                     thanks.classList.remove('hidden');
                     thanks.focus();
